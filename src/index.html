@@ -10,12 +10,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <!-- Tailwind CSS -->
     <link href="/dist/style.css" rel="stylesheet">
+    <!-- Alpine JS-->
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+    <nav class="px-4 py-9" x-data="{navOpen : true}">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <img src="../public/logo/logo-travlog.svg" alt="" class="order-1 sm:order-2">
+                <img @click="navOpen =! navOpen" src="../public/icon/icon-hamburger.svg" alt=""
+                    class="order-2 sm:order-1 lg:hidden hover:cursor-pointer">
+                <div class="order-2 hidden lg:block">
+                    <ul class="flex item gap-16">
+                        <li class="text-sm font-bold text-grey"><a href=""></a>Home</li>
+                        <li class="text-sm font-normal text-grey opacity-50 hover:text-grey hover:opacity-100 hover:cursor-pointer"><a href=""></a>Discover</li>
+                        <li class="text-sm font-normal text-grey opacity-50 hover:text-grey hover:opacity-100 hover:cursor-pointer"><a href=""></a>Spesial Deals</li>
+                        <li class="text-sm font-normal text-grey opacity-50 hover:text-grey hover:opacity-100 hover:cursor-pointer"><a href=""></a>Contact</li>
+                    </ul>
+                </div>
+                <div class="order-3 hidden sm:block">
+                    <button class="grow px-8 py-4 bg-white text-sm text-grey font-bold rounded-full">Login</button>
+                    <button class="grow px-8 py-4 bg-purple text-sm text-white font-bold rounded-full">Sign Up</button>
+                </div>
+            </div>
+        </div>
+        <div x-show="navOpen" x-data="{open:false}" x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90"
+            class="fixed bottom-0 right-0 left-0 p-4 bg-white border lg:hidden">
+            <ul class="flex justify-evenly">
+                <li>
+                    <button class="flex flex-col justify-center items-center gap-1 text-purple">
+                        <ion-icon name="home-outline" class="text-2xl"></ion-icon>
+                        <span class="text-base font-bold">Home</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="flex flex-col justify-center items-center gap-1 text-grey opacity-50">
+                        <ion-icon name="albums-outline" class="text-2xl font"></ion-icon>
+                        <span class="text-base font-normal">Discover</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="flex flex-col justify-center items-center gap-1 text-grey opacity-50">
+                        <ion-icon name="sparkles-outline" class="text-2xl"></ion-icon>
+                        <span class="text-base font-normal">Spesial</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="flex flex-col justify-center items-center gap-1 text-grey opacity-50">
+                        <ion-icon name="megaphone-outline" class="text-2xl"></ion-icon>
+                        <span class="text-base font-normal">Contact</span>
+                    </button>
+                </li>
+                <li>
+                    <button @click="open = !open"
+                        class="flex flex-col justify-center items-center gap-1 text-grey opacity-50">
+                        <ion-icon name="menu-outline" class="text-2xl"></ion-icon>
+                        <span class="text-base font-normal">More</span>
+                    </button>
+                </li>
+            </ul>
+            <div x-show="open" x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+                class="flex absolute bottom-28 left-1/2 -translate-x-1/2 gap-4 w-3/4">
+                <button class="grow px-8 py-4 bg-white text-sm text-grey font-bold rounded-full">Login</button>
+                <button class="grow px-8 py-4 bg-purple text-sm text-white font-bold rounded-full">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
 </body>
 
 </html>
