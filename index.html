@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travlog</title>
+    <link rel="icon" type="image/x-icon" href="public/logo/logo-travlog-favicon.svg">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,11 +13,12 @@
     <!-- Tailwind CSS -->
     <link href="dist/style.css" rel="stylesheet">
     <!-- Alpine JS-->
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/alpinejs@3.13.0/dist/cdn.min.js" defer></script>
 </head>
 
 <body>
-    <nav class="px-4 py-9" x-data="{navOpen : true}">
+    <!-- Navbar Section -->
+    <nav class="px-6 lg:px-16 py-9" x-data="{navOpen : true}">
         <div class="container mx-auto">
             <div class="flex justify-between items-center">
                 <img src="public/logo/logo-travlog.svg" alt="" class="order-1 sm:order-2">
@@ -30,7 +33,7 @@
                     </ul>
                 </div>
                 <div class="order-3 hidden sm:block">
-                    <button class="grow px-8 py-4 bg-white text-sm text-grey font-bold rounded-full">Login</button>
+                    <button class="grow px-8 py-4 bg-white text-sm text-grey hover:text-purple font-bold rounded-full">Login</button>
                     <button class="grow px-8 py-4 bg-purple text-sm text-white font-bold rounded-full">Sign Up</button>
                 </div>
             </div>
@@ -39,7 +42,7 @@
             x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
             x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
             x-transition:leave-end="opacity-0 scale-90"
-            class="fixed bottom-0 right-0 left-0 p-4 bg-white border lg:hidden">
+            class="fixed bottom-0 right-0 left-0 p-4 bg-white border lg:hidden z-50">
             <ul class="flex justify-evenly">
                 <li>
                     <button class="flex flex-col justify-center items-center gap-1 text-purple">
@@ -83,6 +86,34 @@
             </div>
         </div>
     </nav>
+
+    <!-- Hero Section -->
+    <section class="px-6 lg:px-16 py-4 lg:py-16">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 lg:col-span-4 order-2 lg:order-1">
+                    <div class="text-center lg:text-start">
+                        <button class="flex gap-2 mx-auto lg:m-0 px-8 py-4 bg-white text-sm text-pink font-bold rounded-full drop-shadow-shadow-sm">
+                            Explore the world!
+                            <img src="public/icon/icon-work.svg" alt="">
+                        </button>
+                        <h1 class="mt-4 mb-6 md:my-[43px] text-[40px] md:text-[56px] lg:text-[69px] font-bold text-grey leading-tight">Travel <span class="text-pink">top destination</span> of the world</h1>
+                        <p class="mb-8 md:mb-[43px] mx-auto md:w-3/4 lg:w-full text-base md:text-[18px] text-grey opacity-50">We always make our customer happy by providing as many choices many choices as possible</p>
+                        <div class="flex flex-col md:flex-row justify-center lg:justify-start gap-6 lg">
+                            <button class="px-8 py-6 bg-purple text-sm text-white font-bold drop-shadow-shadow-lg rounded-full">Get Started</button>
+                            <button class="flex justify-center items-center gap-2 px-8 py-6 bg-white text-sm font-bold border border-[#EEEEEE] rounded-full z-10">
+                                <img src="public/icon/icon-play-circle.svg" alt="">
+                                Watch Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8 text-center order-1 lg:order-2">
+                    <img src="public/img/hero-image.png" class="w-full" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
 </body>
