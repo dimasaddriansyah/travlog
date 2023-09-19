@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <!-- Tailwind CSS -->
-    <link href="travlog/dist/style.css" rel="stylesheet">
+    <link href="dist/style.css" rel="stylesheet">
     <!-- Alpine JS-->
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
@@ -18,8 +18,8 @@
     <nav class="px-4 py-9" x-data="{navOpen : true}">
         <div class="container mx-auto">
             <div class="flex justify-between items-center">
-                <img src="travlog/public/logo/logo-travlog.svg" alt="" class="order-1 sm:order-2">
-                <img @click="navOpen =! navOpen" src="travlog/public/icon/icon-hamburger.svg" alt=""
+                <img src="public/logo/logo-travlog.svg" alt="" class="order-1 sm:order-2">
+                <img @click="navOpen =! navOpen" src="public/icon/icon-hamburger.svg" alt=""
                     class="order-2 sm:order-1 lg:hidden hover:cursor-pointer">
                 <div class="order-2 hidden lg:block">
                     <ul class="flex item gap-16">
