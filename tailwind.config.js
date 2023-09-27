@@ -10,6 +10,7 @@ module.exports = {
         "purple" : "#5D50C6",
         "pink" : "#F85E9F",
         "orange" : "#FF5722",
+        "yellow": "#FACD49",
         "grey" : "#191825"
       },
       dropShadow:{
