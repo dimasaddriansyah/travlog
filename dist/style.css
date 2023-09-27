@@ -635,6 +635,10 @@ html{
   margin-right: auto;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -667,20 +671,24 @@ html{
   height: 1.25rem;
 }
 
-.h-\[\] {
-  height: ;
+.h-\[100px\] {
+  height: 100px;
 }
 
 .h-\[64px\] {
   height: 64px;
 }
 
-.h-\[575px\] {
-  height: 575px;
-}
-
 .w-3\/4 {
   width: 75%;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[64px\] {
+  width: 64px;
 }
 
 .w-auto {
@@ -689,10 +697,6 @@ html{
 
 .w-full {
   width: 100%;
-}
-
-.w-\[64px\] {
-  width: 64px;
 }
 
 .grow {
@@ -730,6 +734,10 @@ html{
 
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-center {
@@ -788,10 +796,6 @@ html{
   border-radius: 9999px;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .border {
   border-width: 1px;
 }
@@ -799,6 +803,11 @@ html{
 .border-\[\#EEEEEE\] {
   --tw-border-opacity: 1;
   border-color: rgb(238 238 238 / var(--tw-border-opacity));
+}
+
+.bg-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 87 34 / var(--tw-bg-opacity));
 }
 
 .bg-purple {
@@ -809,6 +818,16 @@ html{
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 205 73 / var(--tw-bg-opacity));
+}
+
+.bg-pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 94 159 / var(--tw-bg-opacity));
 }
 
 .p-10 {
@@ -823,10 +842,6 @@ html{
   padding: 2rem;
 }
 
-.p-6 {
-  padding: 1.5rem;
-}
-
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -835,6 +850,11 @@ html{
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .py-4 {
@@ -850,16 +870,6 @@ html{
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-32 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .text-center {
@@ -893,11 +903,6 @@ html{
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-bold {
@@ -1029,16 +1034,8 @@ html{
     height: 2rem;
   }
 
-  .sm\:justify-center {
-    justify-content: center;
-  }
-
   .sm\:gap-7 {
     gap: 1.75rem;
-  }
-
-  .sm\:gap-8 {
-    gap: 2rem;
   }
 }
 
@@ -1056,14 +1053,6 @@ html{
     width: 75%;
   }
 
-  .md\:w-\[350px\] {
-    width: 350px;
-  }
-
-  .md\:w-screen {
-    width: 100vw;
-  }
-
   .md\:w-\[288px\] {
     width: 288px;
   }
@@ -1072,25 +1061,39 @@ html{
     flex-direction: row;
   }
 
+  .md\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
   .md\:justify-center {
     justify-content: center;
-  }
-
-  .md\:justify-between {
-    justify-content: space-between;
-  }
-
-  .md\:gap-8 {
-    gap: 2rem;
   }
 
   .md\:gap-16 {
     gap: 4rem;
   }
 
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
   .md\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .md\:text-\[18px\] {
@@ -1099,11 +1102,6 @@ html{
 
   .md\:text-\[56px\] {
     font-size: 56px;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 }
 
@@ -1118,6 +1116,14 @@ html{
 
   .lg\:col-span-4 {
     grid-column: span 4 / span 4;
+  }
+
+  .lg\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .lg\:col-span-7 {
+    grid-column: span 7 / span 7;
   }
 
   .lg\:col-span-8 {
@@ -1156,10 +1162,6 @@ html{
     flex-direction: row;
   }
 
-  .lg\:flex-col {
-    flex-direction: column;
-  }
-
   .lg\:items-center {
     align-items: center;
   }
@@ -1186,9 +1188,8 @@ html{
     padding-bottom: 4rem;
   }
 
-  .lg\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+  .lg\:pr-20 {
+    padding-right: 5rem;
   }
 
   .lg\:text-start {
@@ -1211,10 +1212,5 @@ html{
 
   .lg\:text-\[69px\] {
     font-size: 69px;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 }
